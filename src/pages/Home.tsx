@@ -1,17 +1,8 @@
+import { NavLink } from 'react-router-dom';
+
 function Home() {
   return (
     <>
-      <header>
-        <nav>
-          <ul>
-            <li>00 Home</li>
-            <li>01 Destination</li>
-            <li>02 Crew</li>
-            <li>03 Technology</li>
-          </ul>
-        </nav>
-      </header>
-
       <main className="container grid">
         <div>
           <h5 className="heading subtitle">So, you want to travel to</h5>

@@ -110,11 +110,37 @@ h5 {
 /*---------------------------------------------------------
   CUSTOM ELEMENTS
 ---------------------------------------------------------*/
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
 
 .container {
   max-width: var(--desktop);
   padding-inline: var(--space-lg);
   margin-inline: auto;
+}
+
+/* Navigation Bar */
+.navbar {
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-md);
+  cursor: pointer;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+.active {
+  color: aquamarine;
 }
 
 .heading {
@@ -146,12 +172,4 @@ h5 {
   color: var(--transparent-75);
   font-weight: var(--fw-700);
   padding-right: var(--space-md);
-}
-
-.grid {
-  display: grid;
-}
-
-.flex {
-  display: flex;
 }
