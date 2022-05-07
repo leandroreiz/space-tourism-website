@@ -1,0 +1,157 @@
+/*---------------------------------------------------------
+  IMPORTS
+---------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
+
+/*---------------------------------------------------------
+  RESETS
+---------------------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*---------------------------------------------------------
+  DESIGN SYSTEM
+---------------------------------------------------------*/
+
+:root {
+  /* Colors */
+  --black: hsl(230, 35%, 7%);
+  --light-blue: hsl(231, 77%, 90%);
+  --white: hsl(0, 0%, 100%);
+  --transparent-90: hsla(0, 0%, 100%, 0.1);
+  --transparent-75: hsla(0, 0%, 100%, 0.25);
+  --transparent-50: hsla(0, 0%, 100%, 0.5);
+
+  /* Font family */
+  --ff-bellefair: 'Bellefair', serif;
+  --ff-barlow: 'Barlow Condensed', sans-serif;
+
+  /* Font size */
+  --fs-5xl: 9.375rem; /* 150px */
+  --fs-4xl: 6.25rem; /* 100px */
+  --fs-3xl: 5rem; /* 80px */
+  --fs-2xl: 3.5rem; /* 56px */
+  --fs-xl: 2rem; /* 32px */
+  --fs-lg: 1.75rem; /* 28px */
+  --fs-md: 1.25rem; /* 20px */
+  --fs-base: 1.125rem; /* 18px */
+  --fs-sm: 1rem; /* 16px */
+  --fs-xs: 0.9375rem; /* 15px */
+  --fs-2xs: 0.875rem; /* 14px */
+
+  /* Font weight */
+  --fw-400: 400;
+  --fw-700: 700;
+
+  /* Letter spacing */
+  --ls-lg: 4.725px;
+  --ls-md: 2.7px;
+  --ls-sm: 2.35px;
+
+  /* Line height */
+  --lh-lg: 32px;
+  --lh-md: 28px;
+  --lh-sm: 25px;
+
+  /* Spacing */
+  --space-unit: 1rem;
+  --space-2xl: calc(5.25 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-2xs: calc(0.25 * var(--space-unit));
+
+  /* Screens */
+  --desktop: 1440px;
+  --tablet: 768px;
+  --mobile: 375px;
+}
+
+/*---------------------------------------------------------
+  DEFAULT ELEMENTS
+---------------------------------------------------------*/
+
+body {
+  background-color: var(--black);
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-400);
+  color: var(--white);
+}
+
+h1 {
+  font-size: var(--fs-5xl);
+}
+
+h2 {
+  font-size: var(--fs-4xl);
+}
+
+h3 {
+  font-size: var(--fs-2xl);
+}
+
+h4 {
+  font-size: var(--fs-xl);
+}
+
+h5 {
+  font-size: var(--fs-lg);
+}
+
+/*---------------------------------------------------------
+  CUSTOM ELEMENTS
+---------------------------------------------------------*/
+
+.container {
+  max-width: var(--desktop);
+  padding-inline: var(--space-lg);
+  margin-inline: auto;
+}
+
+.heading {
+  font-family: var(--ff-bellefair);
+  font-weight: var(--fw-400);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.body-text {
+  color: var(--white);
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-base);
+  line-height: var(--lh-lg);
+}
+
+.title,
+.subtitle,
+.section-number {
+  font-family: var(--ff-barlow);
+  letter-spacing: var(--ls-lg);
+}
+
+.subtitle {
+  color: var(--light-blue);
+}
+
+.section-number {
+  color: var(--transparent-75);
+  font-weight: var(--fw-700);
+  padding-right: var(--space-md);
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
