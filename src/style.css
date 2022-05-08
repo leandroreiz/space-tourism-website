@@ -25,9 +25,10 @@
   --black: hsl(230, 35%, 7%);
   --light-blue: hsl(231, 77%, 90%);
   --white: hsl(0, 0%, 100%);
-  --transparent-90: hsla(0, 0%, 100%, 0.1);
-  --transparent-75: hsla(0, 0%, 100%, 0.25);
-  --transparent-50: hsla(0, 0%, 100%, 0.5);
+  --transparent-navbar: hsla(0, 0%, 100%, 0.04);
+  --transparent-1: hsla(0, 0%, 100%, 0.1);
+  --transparent-2: hsla(0, 0%, 100%, 0.25);
+  --transparent-3: hsla(0, 0%, 100%, 0.5);
 
   /* Font family */
   --ff-bellefair: 'Bellefair', serif;
@@ -62,6 +63,7 @@
 
   /* Spacing */
   --space-unit: 1rem;
+  --space-3xl: calc(10 * var(--space-unit));
   --space-2xl: calc(5.25 * var(--space-unit));
   --space-xl: calc(3.25 * var(--space-unit));
   --space-lg: calc(2 * var(--space-unit));
@@ -108,8 +110,9 @@ h5 {
 }
 
 /*---------------------------------------------------------
-  CUSTOM ELEMENTS
+  UTILITY CLASSES
 ---------------------------------------------------------*/
+
 .grid {
   display: grid;
 }
@@ -118,31 +121,90 @@ h5 {
   display: flex;
 }
 
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .container {
   max-width: var(--desktop);
   padding-inline: var(--space-lg);
   margin-inline: auto;
 }
 
-/* Navigation Bar */
+/*---------------------------------------------------------
+  CUSTOM ELEMENTS
+---------------------------------------------------------*/
+
+/* Header, Logo & Navigation Bar */
+.header {
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: calc(100% - (2 * var(--space-lg)));
+}
+
+.logo {
+  padding-left: var(--space-lg);
+}
+
 .navbar {
-  font-size: var(--fs-sm);
   letter-spacing: var(--ls-md);
-  cursor: pointer;
+  padding-block: var(--space-lg);
 }
 
 .navbar ul {
-  list-style-type: none;
+  background-color: var(--transparent-navbar);
+  backdrop-filter: blur(0.6rem);
+  padding-inline: var(--space-3xl);
+  gap: var(--space-xl);
+  list-style: none;
 }
 
-.navbar ul li a {
+/* Select NavLinks */
+.navbar a {
+  color: var(--white);
   text-decoration: none;
 }
 
-.active {
-  color: aquamarine;
+.navbar span {
+  font-weight: var(--fw-700);
+  margin-right: var(--space-xs);
 }
 
+.border-bottom--animation > * {
+  padding: var(--space-lg) 0;
+  border-bottom: 0.2rem solid transparent;
+}
+
+.border-bottom--animation > *:hover,
+.border-bottom--animation > *:focus {
+  border-color: var(--transparent-2);
+}
+
+.border-bottom--animation .active {
+  padding: var(--space-lg) 0;
+  border-bottom: 0.2rem solid var(--white);
+}
+
+/*---------------------------------------------------------
+  TYPOGRAPHY
+---------------------------------------------------------*/
 .heading {
   font-family: var(--ff-bellefair);
   font-weight: var(--fw-400);
@@ -172,4 +234,22 @@ h5 {
   color: var(--transparent-75);
   font-weight: var(--fw-700);
   padding-right: var(--space-md);
+}
+
+/*---------------------------------------------------------
+  PAGES
+---------------------------------------------------------*/
+
+.home {
+  background-image: url(./pages/Home/assets/background-home-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  z-index: -1;
+}
+
+.home-content {
+}
+
+.explore-btn {
 }

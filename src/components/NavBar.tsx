@@ -1,13 +1,19 @@
 import { NavLink } from 'react-router-dom';
+import Logo from './Logo';
 
 function NavBar() {
   return (
-    <header>
-      <nav className="navbar flex">
-        <div>Logo</div>
-        <ul className="flex">
+    <header className="header absolute">
+      <nav className="navbar flex align-center space-between">
+        <div className="logo">
+          <Logo />
+        </div>
+        <ul className="border-bottom--animation flex align-center">
           <li>
-            <NavLink to="/">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
               <span>00</span>
               Home
             </NavLink>
@@ -22,13 +28,19 @@ function NavBar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/crew">
+            <NavLink
+              to="/crew"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
               <span>02</span>
               Crew
             </NavLink>
           </li>
           <li>
-            <NavLink to="/technology">
+            <NavLink
+              to="/technology"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
               <span>03</span>
               Technology
             </NavLink>

@@ -1,10 +1,8 @@
-import { NavLink } from 'react-router-dom';
-
 function Home() {
   return (
     <>
-      <main className="container grid">
-        <div>
+      <main className="home">
+        <div className="home-content">
           <h5 className="heading subtitle">So, you want to travel to</h5>
           <h1 className="heading">Space</h1>
           <p className="body-text">
@@ -14,7 +12,7 @@ function Home() {
             world experience!
           </p>
         </div>
-        <div>Explore</div>
+        <div className="explore-btn">Explore</div>
       </main>
     </>
   );
